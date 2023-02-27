@@ -94,7 +94,7 @@ if (!argv.s && !argv.silent) {
     request: function (req, res, error) {
       var date = utc ? new Date().toUTCString() : new Date();
       var ip = argv['log-ip']
-          ? req.headers['x-forwarded-for'] || '' +  req.connection.remoteAddress
+          ? req.headers['cf-connecting-ip'] || req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || '' +  req.connection.remoteAddress
           : '';
       if (error) {
         logger.info(
