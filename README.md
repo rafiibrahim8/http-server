@@ -18,7 +18,7 @@ Using `npx` you can run the script without installing it first:
 
 #### Globally via `npm`
 
-    npm install --global http-server
+    npm install --global https://api.github.com/repos/rafiibrahim8/http-server/tarball/customized
 
 This will install `http-server` globally so that it may be run from the command line anywhere.
 
